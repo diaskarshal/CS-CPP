@@ -1,0 +1,499 @@
+
+Grading Report:
+Directory:
+   "/home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file"
+
+Grade 77.9529/100
+   test credit     77.9529/90
+   other credit    0/10
+Tests:
+   completeness :   weight 10    (timelimit = 15 sec)     -> correctness 10/10
+   simple :   weight 10    (timelimit = 15 sec)     -> correctness 10/10 - valgrind 3%
+   copy-constr :   weight 10    (timelimit = 15 sec)     -> (crashed or timed out)
+   assignment :   weight 15    (timelimit = 15 sec)     -> correctness 15/15 - valgrind 3%
+   self-assignment :   weight 5    (timelimit = 15 sec)     -> correctness 5/5 - valgrind 3%
+   at :   weight 10    (timelimit = 15 sec)     -> correctness 10/10
+   capacity :   weight 10    (timelimit = 15 sec)     -> correctness 10/10 - valgrind 11.4707%
+   initlist-constr :   weight 10    (timelimit = 15 sec)     -> correctness 10/10
+   print :   weight 10    (timelimit = 15 sec)     -> correctness 10/10
+Other Credit:
+   compiling student main.cpp :   0/10
+
+Deductions:
+
+-----------------------------------------------------------------------
+- compiler output for student main.cpp : 
+-----------------------------------------------------------------------
+/home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/main_copy.cpp: In function ‘int main(int, char**)’:
+/home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/main_copy.cpp:74:65: error: could not convert ‘{"fremd", "bin", "ich", "eingezogen"}’ from ‘<brace-enclosed initializer list>’ to ‘csci152::vector’
+   74 |    csci152::vector vect = { "fremd", "bin", "ich", "eingezogen" };
+      |                                                                 ^
+      |                                                                 |
+      |                                                                 <brace-enclosed initializer list>
+/home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/main_copy.cpp:75:21: error: cannot convert ‘const char [6]’ to ‘const csci152::basetype&’ {aka ‘const double&’}
+   75 |    vect. push_back( "fremd" );
+      |                     ^~~~~~~
+      |                     |
+      |                     const char [6]
+In file included from /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/main_copy.cpp:1:
+/home/nivelle/programs/autograder2025pa01/vectortests/studmain_includes/vector.h:45:39: note:   initializing argument 1 of ‘void csci152::vector::push_back(const csci152::basetype&)’
+   45 |       void push_back( const basetype& val );
+      |                       ~~~~~~~~~~~~~~~~^~~
+/home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/main_copy.cpp:76:21: error: cannot convert ‘const char [4]’ to ‘const csci152::basetype&’ {aka ‘const double&’}
+   76 |    vect. push_back( "ich" );
+      |                     ^~~~~
+      |                     |
+      |                     const char [4]
+/home/nivelle/programs/autograder2025pa01/vectortests/studmain_includes/vector.h:45:39: note:   initializing argument 1 of ‘void csci152::vector::push_back(const csci152::basetype&)’
+   45 |       void push_back( const basetype& val );
+      |                       ~~~~~~~~~~~~~~~~^~~
+/home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/main_copy.cpp:77:21: error: cannot convert ‘const char [7]’ to ‘const csci152::basetype&’ {aka ‘const double&’}
+   77 |    vect. push_back( "wieder" );
+      |                     ^~~~~~~~
+      |                     |
+      |                     const char [7]
+/home/nivelle/programs/autograder2025pa01/vectortests/studmain_includes/vector.h:45:39: note:   initializing argument 1 of ‘void csci152::vector::push_back(const csci152::basetype&)’
+   45 |       void push_back( const basetype& val );
+      |                       ~~~~~~~~~~~~~~~~^~~
+/home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/main_copy.cpp:82:21: error: cannot convert ‘const char [5]’ to ‘const csci152::basetype&’ {aka ‘const double&’}
+   82 |    vect. insert( 5, "zieh" );
+      |                     ^~~~~~
+      |                     |
+      |                     const char [5]
+/home/nivelle/programs/autograder2025pa01/vectortests/studmain_includes/vector.h:74:46: note:   initializing argument 2 of ‘void csci152::vector::insert(size_t, const csci152::basetype&)’
+   74 |       void insert( size_t i, const basetype& val );
+      |                              ~~~~~~~~~~~~~~~~^~~
+/home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/main_copy.cpp:88:21: error: cannot convert ‘const char [4]’ to ‘const csci152::basetype&’ {aka ‘const double&’}
+   88 |    vect. push_back( "aus" );
+      |                     ^~~~~
+      |                     |
+      |                     const char [4]
+/home/nivelle/programs/autograder2025pa01/vectortests/studmain_includes/vector.h:45:39: note:   initializing argument 1 of ‘void csci152::vector::push_back(const csci152::basetype&)’
+   45 |       void push_back( const basetype& val );
+      |                       ~~~~~~~~~~~~~~~~^~~
+
+
+-----------------------------------------------------------------------
+- compiler output for vector.cpp with our main.cpp : 
+-----------------------------------------------------------------------
+(file is empty)
+
+
+-----------------------------------------------------------------------
+- output for test completeness : 
+-----------------------------------------------------------------------
+running test completeness with weight 10.000000
+
+[si, vis, pacem, para, bellum]
+
+NORMAL-END: TrcsNlVq
+
+
+-----------------------------------------------------------------------
+- valgrind output for test completeness : 
+-----------------------------------------------------------------------
+==00:00:00:00.000 9494== Memcheck, a memory error detector
+==00:00:00:00.000 9494== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==00:00:00:00.000 9494== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==00:00:00:00.000 9494== Command: /home/nivelle/submissions/pa01round01/section01/Dias\ Karshal_731278_assignsubmission_file/tests.exe completeness 10.000000
+==00:00:00:00.000 9494== Parent PID: 9493
+==00:00:00:00.000 9494== 
+==00:00:00:00.532 9494== 
+==00:00:00:00.532 9494== HEAP SUMMARY:
+==00:00:00:00.532 9494==     in use at exit: 0 bytes in 0 blocks
+==00:00:00:00.532 9494==   total heap usage: 10 allocs, 10 frees, 79,168 bytes allocated
+==00:00:00:00.532 9494== 
+==00:00:00:00.532 9494== All heap blocks were freed -- no leaks are possible
+==00:00:00:00.532 9494== 
+==00:00:00:00.532 9494== For lists of detected and suppressed errors, rerun with: -s
+==00:00:00:00.532 9494== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+-----------------------------------------------------------------------
+- report for test completeness : 
+-----------------------------------------------------------------------
+wallclock time 0.548153 seconds
+process returned 0
+
+
+-----------------------------------------------------------------------
+- output for test simple : 
+-----------------------------------------------------------------------
+running test simple with weight 10.000000
+
+
+NORMAL-END: TrcsNlVq
+
+
+-----------------------------------------------------------------------
+- valgrind output for test simple : 
+-----------------------------------------------------------------------
+==00:00:00:00.000 9497== Memcheck, a memory error detector
+==00:00:00:00.000 9497== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==00:00:00:00.000 9497== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==00:00:00:00.000 9497== Command: /home/nivelle/submissions/pa01round01/section01/Dias\ Karshal_731278_assignsubmission_file/tests.exe simple 10.000000
+==00:00:00:00.000 9497== Parent PID: 9496
+==00:00:00:00.000 9497== 
+==00:00:00:00.502 9497== Invalid read of size 8
+==00:00:00:00.502 9497==    at 0x10E632: csci152::vector::erase(unsigned long) (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.502 9497==    by 0x1117A3: check_make_empty(comparator<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, csci152::vector, vect_comp>&) (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.502 9497==    by 0x10C031: main (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.502 9497==  Address 0x4e46980 is 8 bytes after a block of size 520 alloc'd
+==00:00:00:00.502 9497==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==00:00:00:00.502 9497==    by 0x10E085: csci152::vector::push_back(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.502 9497==    by 0x10B01D: main (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.502 9497== 
+==00:00:00:01.371 9497== 
+==00:00:00:01.371 9497== HEAP SUMMARY:
+==00:00:00:01.371 9497==     in use at exit: 0 bytes in 0 blocks
+==00:00:00:01.371 9497==   total heap usage: 30,691 allocs, 30,691 frees, 191,438,744 bytes allocated
+==00:00:00:01.371 9497== 
+==00:00:00:01.371 9497== All heap blocks were freed -- no leaks are possible
+==00:00:00:01.371 9497== 
+==00:00:00:01.371 9497== For lists of detected and suppressed errors, rerun with: -s
+==00:00:00:01.371 9497== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+
+
+-----------------------------------------------------------------------
+- report for test simple : 
+-----------------------------------------------------------------------
+wallclock time 1.38757 seconds
+process returned 0
+
+
+-----------------------------------------------------------------------
+- output for test copy-constr : 
+-----------------------------------------------------------------------
+running test copy-constr with weight 10.000000
+
+
+
+-----------------------------------------------------------------------
+- valgrind output for test copy-constr : 
+-----------------------------------------------------------------------
+==00:00:00:00.000 9500== Memcheck, a memory error detector
+==00:00:00:00.000 9500== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==00:00:00:00.000 9500== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==00:00:00:00.000 9500== Command: /home/nivelle/submissions/pa01round01/section01/Dias\ Karshal_731278_assignsubmission_file/tests.exe copy-constr 10.000000
+==00:00:00:00.000 9500== Parent PID: 9499
+==00:00:00:00.000 9500== 
+==00:00:00:00.510 9500== Invalid read of size 8
+==00:00:00:00.510 9500==    at 0x10E632: csci152::vector::erase(unsigned long) (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.510 9500==    by 0x1117A3: check_make_empty(comparator<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, csci152::vector, vect_comp>&) (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.510 9500==    by 0x10C031: main (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.510 9500==  Address 0x4e60000 is 8 bytes after a block of size 520 alloc'd
+==00:00:00:00.510 9500==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==00:00:00:00.510 9500==    by 0x10E085: csci152::vector::push_back(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.510 9500==    by 0x10B01D: main (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.510 9500== 
+==00:00:00:00.511 9500== Invalid read of size 8
+==00:00:00:00.511 9500==    at 0x10E632: csci152::vector::erase(unsigned long) (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.511 9500==    by 0x1117A3: check_make_empty(comparator<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, csci152::vector, vect_comp>&) (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.511 9500==    by 0x10B483: main (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.511 9500==  Address 0x4e86cd0 is 8 bytes after a block of size 520 alloc'd
+==00:00:00:00.511 9500==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==00:00:00:00.511 9500==    by 0x10DE2C: csci152::vector::vector(csci152::vector const&) (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.511 9500==    by 0x10B473: main (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.511 9500== 
+**00:00:00:00.670 9500** new/new[] failed and should throw an exception, but Valgrind
+**00:00:00:00.670 9500**    cannot throw exceptions and so is aborting instead.  Sorry.
+==00:00:00:00.670 9500==    at 0x48464BC: ??? (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==00:00:00:00.670 9500==    by 0x4847015: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==00:00:00:00.670 9500==    by 0x10E7FB: csci152::vector::erase(unsigned long) (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.670 9500==    by 0x1117A3: check_make_empty(comparator<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, csci152::vector, vect_comp>&) (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.670 9500==    by 0x10B483: main (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.683 9500== 
+==00:00:00:00.683 9500== HEAP SUMMARY:
+==00:00:00:00.683 9500==     in use at exit: 2,624 bytes in 6 blocks
+==00:00:00:00.683 9500==   total heap usage: 17,487 allocs, 17,481 frees, 28,343,088 bytes allocated
+==00:00:00:00.683 9500== 
+==00:00:00:00.684 9500== LEAK SUMMARY:
+==00:00:00:00.684 9500==    definitely lost: 0 bytes in 0 blocks
+==00:00:00:00.684 9500==    indirectly lost: 0 bytes in 0 blocks
+==00:00:00:00.684 9500==      possibly lost: 0 bytes in 0 blocks
+==00:00:00:00.684 9500==    still reachable: 2,624 bytes in 6 blocks
+==00:00:00:00.684 9500==                       of which reachable via heuristic:
+==00:00:00:00.684 9500==                         newarray           : 1,600 bytes in 4 blocks
+==00:00:00:00.684 9500==         suppressed: 0 bytes in 0 blocks
+==00:00:00:00.684 9500== Rerun with --leak-check=full to see details of leaked memory
+==00:00:00:00.684 9500== 
+==00:00:00:00.684 9500== For lists of detected and suppressed errors, rerun with: -s
+==00:00:00:00.684 9500== ERROR SUMMARY: 13 errors from 2 contexts (suppressed: 0 from 0)
+
+
+-----------------------------------------------------------------------
+- report for test copy-constr : 
+-----------------------------------------------------------------------
+wallclock time 0.700753 seconds
+process returned 256
+
+
+-----------------------------------------------------------------------
+- output for test assignment : 
+-----------------------------------------------------------------------
+running test assignment with weight 15.000000
+
+
+NORMAL-END: TrcsNlVq
+
+
+-----------------------------------------------------------------------
+- valgrind output for test assignment : 
+-----------------------------------------------------------------------
+==00:00:00:00.000 9503== Memcheck, a memory error detector
+==00:00:00:00.000 9503== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==00:00:00:00.000 9503== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==00:00:00:00.000 9503== Command: /home/nivelle/submissions/pa01round01/section01/Dias\ Karshal_731278_assignsubmission_file/tests.exe assignment 15.000000
+==00:00:00:00.000 9503== Parent PID: 9502
+==00:00:00:00.000 9503== 
+==00:00:00:00.511 9503== Invalid read of size 8
+==00:00:00:00.511 9503==    at 0x10E632: csci152::vector::erase(unsigned long) (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.511 9503==    by 0x1117A3: check_make_empty(comparator<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, csci152::vector, vect_comp>&) (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.511 9503==    by 0x10C031: main (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.511 9503==  Address 0x4e49670 is 8 bytes after a block of size 520 alloc'd
+==00:00:00:00.511 9503==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==00:00:00:00.511 9503==    by 0x10E085: csci152::vector::push_back(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.511 9503==    by 0x10B01D: main (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.511 9503== 
+==00:00:00:01.594 9503== 
+==00:00:00:01.594 9503== HEAP SUMMARY:
+==00:00:00:01.594 9503==     in use at exit: 0 bytes in 0 blocks
+==00:00:00:01.594 9503==   total heap usage: 35,346 allocs, 35,346 frees, 209,232,744 bytes allocated
+==00:00:00:01.594 9503== 
+==00:00:00:01.594 9503== All heap blocks were freed -- no leaks are possible
+==00:00:00:01.594 9503== 
+==00:00:00:01.594 9503== For lists of detected and suppressed errors, rerun with: -s
+==00:00:00:01.594 9503== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+
+
+-----------------------------------------------------------------------
+- report for test assignment : 
+-----------------------------------------------------------------------
+wallclock time 1.61016 seconds
+process returned 0
+
+
+-----------------------------------------------------------------------
+- output for test self-assignment : 
+-----------------------------------------------------------------------
+running test self-assignment with weight 5.000000
+
+
+NORMAL-END: TrcsNlVq
+
+
+-----------------------------------------------------------------------
+- valgrind output for test self-assignment : 
+-----------------------------------------------------------------------
+==00:00:00:00.000 9506== Memcheck, a memory error detector
+==00:00:00:00.000 9506== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==00:00:00:00.000 9506== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==00:00:00:00.000 9506== Command: /home/nivelle/submissions/pa01round01/section01/Dias\ Karshal_731278_assignsubmission_file/tests.exe self-assignment 5.000000
+==00:00:00:00.000 9506== Parent PID: 9505
+==00:00:00:00.000 9506== 
+==00:00:00:00.507 9506== Invalid read of size 8
+==00:00:00:00.507 9506==    at 0x10E632: csci152::vector::erase(unsigned long) (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.507 9506==    by 0x1117A3: check_make_empty(comparator<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, csci152::vector, vect_comp>&) (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.507 9506==    by 0x10C031: main (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.507 9506==  Address 0x4e46980 is 8 bytes after a block of size 520 alloc'd
+==00:00:00:00.507 9506==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==00:00:00:00.507 9506==    by 0x10E085: csci152::vector::push_back(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.507 9506==    by 0x10B01D: main (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.507 9506== 
+==00:00:00:01.668 9506== 
+==00:00:00:01.668 9506== HEAP SUMMARY:
+==00:00:00:01.668 9506==     in use at exit: 0 bytes in 0 blocks
+==00:00:00:01.668 9506==   total heap usage: 30,691 allocs, 30,691 frees, 191,438,744 bytes allocated
+==00:00:00:01.668 9506== 
+==00:00:00:01.668 9506== All heap blocks were freed -- no leaks are possible
+==00:00:00:01.668 9506== 
+==00:00:00:01.668 9506== For lists of detected and suppressed errors, rerun with: -s
+==00:00:00:01.668 9506== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+
+
+-----------------------------------------------------------------------
+- report for test self-assignment : 
+-----------------------------------------------------------------------
+wallclock time 1.68496 seconds
+process returned 0
+
+
+-----------------------------------------------------------------------
+- output for test at : 
+-----------------------------------------------------------------------
+running test at with weight 10.000000
+
+
+NORMAL-END: TrcsNlVq
+
+
+-----------------------------------------------------------------------
+- valgrind output for test at : 
+-----------------------------------------------------------------------
+==00:00:00:00.000 9509== Memcheck, a memory error detector
+==00:00:00:00.000 9509== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==00:00:00:00.000 9509== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==00:00:00:00.000 9509== Command: /home/nivelle/submissions/pa01round01/section01/Dias\ Karshal_731278_assignsubmission_file/tests.exe at 10.000000
+==00:00:00:00.000 9509== Parent PID: 9508
+==00:00:00:00.000 9509== 
+==00:00:00:00.557 9509== 
+==00:00:00:00.557 9509== HEAP SUMMARY:
+==00:00:00:00.557 9509==     in use at exit: 0 bytes in 0 blocks
+==00:00:00:00.557 9509==   total heap usage: 72 allocs, 72 frees, 85,797 bytes allocated
+==00:00:00:00.557 9509== 
+==00:00:00:00.557 9509== All heap blocks were freed -- no leaks are possible
+==00:00:00:00.557 9509== 
+==00:00:00:00.557 9509== For lists of detected and suppressed errors, rerun with: -s
+==00:00:00:00.557 9509== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+-----------------------------------------------------------------------
+- report for test at : 
+-----------------------------------------------------------------------
+wallclock time 0.57242 seconds
+process returned 0
+
+
+-----------------------------------------------------------------------
+- output for test capacity : 
+-----------------------------------------------------------------------
+running test capacity with weight 10.000000
+
+too many reallocations 996 while shrinking, should be log(500)
+
+NORMAL-END: TrcsNlVq
+
+
+-----------------------------------------------------------------------
+- valgrind output for test capacity : 
+-----------------------------------------------------------------------
+==00:00:00:00.000 9512== Memcheck, a memory error detector
+==00:00:00:00.000 9512== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==00:00:00:00.000 9512== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==00:00:00:00.000 9512== Command: /home/nivelle/submissions/pa01round01/section01/Dias\ Karshal_731278_assignsubmission_file/tests.exe capacity 10.000000
+==00:00:00:00.000 9512== Parent PID: 9511
+==00:00:00:00.000 9512== 
+==00:00:00:00.688 9512== Invalid read of size 8
+==00:00:00:00.688 9512==    at 0x10E632: csci152::vector::erase(unsigned long) (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.688 9512==    by 0x10C813: main (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.688 9512==  Address 0x5a1e800 is 8 bytes after a block of size 16,392 alloc'd
+==00:00:00:00.688 9512==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==00:00:00:00.688 9512==    by 0x10E52C: csci152::vector::shrink() (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.688 9512==    by 0x10C81B: main (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.688 9512== 
+==00:00:00:00.753 9512== Invalid read of size 8
+==00:00:00:00.753 9512==    at 0x10E836: csci152::vector::erase(unsigned long) (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.753 9512==    by 0x10C813: main (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.753 9512==  Address 0x4e43558 is 0 bytes after a block of size 264 alloc'd
+==00:00:00:00.753 9512==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==00:00:00:00.753 9512==    by 0x10E52C: csci152::vector::shrink() (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.753 9512==    by 0x10C81B: main (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.753 9512== 
+==00:00:00:00.753 9512== Invalid read of size 2
+==00:00:00:00.753 9512==    at 0x4852EB0: memmove (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==00:00:00:00.753 9512==    by 0x10E852: csci152::vector::erase(unsigned long) (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.753 9512==    by 0x10C813: main (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.753 9512==  Address 0x4e43568 is 16 bytes after a block of size 264 alloc'd
+==00:00:00:00.753 9512==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==00:00:00:00.753 9512==    by 0x10E52C: csci152::vector::shrink() (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.753 9512==    by 0x10C81B: main (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.753 9512== 
+==00:00:00:00.753 9512== Invalid read of size 2
+==00:00:00:00.753 9512==    at 0x4852EBF: memmove (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==00:00:00:00.753 9512==    by 0x10E852: csci152::vector::erase(unsigned long) (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.753 9512==    by 0x10C813: main (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.753 9512==  Address 0x4e4356c is 20 bytes after a block of size 264 alloc'd
+==00:00:00:00.753 9512==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==00:00:00:00.753 9512==    by 0x10E52C: csci152::vector::shrink() (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.753 9512==    by 0x10C81B: main (in /home/nivelle/submissions/pa01round01/section01/Dias Karshal_731278_assignsubmission_file/tests.exe)
+==00:00:00:00.753 9512== 
+==00:00:00:00.782 9512== 
+==00:00:00:00.782 9512== HEAP SUMMARY:
+==00:00:00:00.782 9512==     in use at exit: 0 bytes in 0 blocks
+==00:00:00:00.782 9512==   total heap usage: 2,016 allocs, 2,016 frees, 43,357,912 bytes allocated
+==00:00:00:00.782 9512== 
+==00:00:00:00.782 9512== All heap blocks were freed -- no leaks are possible
+==00:00:00:00.782 9512== 
+==00:00:00:00.782 9512== For lists of detected and suppressed errors, rerun with: -s
+==00:00:00:00.782 9512== ERROR SUMMARY: 11 errors from 4 contexts (suppressed: 0 from 0)
+
+
+-----------------------------------------------------------------------
+- report for test capacity : 
+-----------------------------------------------------------------------
+wallclock time 0.798083 seconds
+process returned 0
+
+
+-----------------------------------------------------------------------
+- output for test initlist-constr : 
+-----------------------------------------------------------------------
+running test initlist-constr with weight 10.000000
+
+
+NORMAL-END: TrcsNlVq
+
+
+-----------------------------------------------------------------------
+- valgrind output for test initlist-constr : 
+-----------------------------------------------------------------------
+==00:00:00:00.000 9515== Memcheck, a memory error detector
+==00:00:00:00.000 9515== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==00:00:00:00.000 9515== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==00:00:00:00.000 9515== Command: /home/nivelle/submissions/pa01round01/section01/Dias\ Karshal_731278_assignsubmission_file/tests.exe initlist-constr 10.000000
+==00:00:00:00.000 9515== Parent PID: 9514
+==00:00:00:00.000 9515== 
+==00:00:00:00.525 9515== 
+==00:00:00:00.525 9515== HEAP SUMMARY:
+==00:00:00:00.525 9515==     in use at exit: 0 bytes in 0 blocks
+==00:00:00:00.525 9515==   total heap usage: 10 allocs, 10 frees, 78,960 bytes allocated
+==00:00:00:00.525 9515== 
+==00:00:00:00.525 9515== All heap blocks were freed -- no leaks are possible
+==00:00:00:00.525 9515== 
+==00:00:00:00.525 9515== For lists of detected and suppressed errors, rerun with: -s
+==00:00:00:00.525 9515== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+-----------------------------------------------------------------------
+- report for test initlist-constr : 
+-----------------------------------------------------------------------
+wallclock time 0.540231 seconds
+process returned 0
+
+
+-----------------------------------------------------------------------
+- output for test print : 
+-----------------------------------------------------------------------
+running test print with weight 10.000000
+
+
+NORMAL-END: TrcsNlVq
+
+
+-----------------------------------------------------------------------
+- valgrind output for test print : 
+-----------------------------------------------------------------------
+==00:00:00:00.000 9518== Memcheck, a memory error detector
+==00:00:00:00.000 9518== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==00:00:00:00.000 9518== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==00:00:00:00.000 9518== Command: /home/nivelle/submissions/pa01round01/section01/Dias\ Karshal_731278_assignsubmission_file/tests.exe print 10.000000
+==00:00:00:00.000 9518== Parent PID: 9517
+==00:00:00:00.000 9518== 
+==00:00:00:00.529 9518== 
+==00:00:00:00.529 9518== HEAP SUMMARY:
+==00:00:00:00.529 9518==     in use at exit: 0 bytes in 0 blocks
+==00:00:00:00.529 9518==   total heap usage: 8 allocs, 8 frees, 78,296 bytes allocated
+==00:00:00:00.529 9518== 
+==00:00:00:00.529 9518== All heap blocks were freed -- no leaks are possible
+==00:00:00:00.529 9518== 
+==00:00:00:00.529 9518== For lists of detected and suppressed errors, rerun with: -s
+==00:00:00:00.529 9518== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+-----------------------------------------------------------------------
+- report for test print : 
+-----------------------------------------------------------------------
+wallclock time 0.544883 seconds
+process returned 0
+
+

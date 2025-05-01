@@ -1,0 +1,23 @@
+
+%rootdirs
+   Source = .
+   Exec = .
+   Lexing = /home/nivelle/programs
+
+%options
+   std=c++20
+   Wall
+   pedantic
+   pedantic-errors
+
+%dir Exec
+%exec calculator
+
+%dir Source
+%sources
+   calculator.cpp
+   symbol.cpp
+   tokenizer.cpp
+   filereader.cpp
+
+
