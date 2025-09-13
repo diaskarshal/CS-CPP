@@ -1,5 +1,6 @@
-﻿# Computer Science Laboratory Works
+﻿# Computer Science - C++
  
-## Getting familiar with C++ language
+University course: Data Structures and Performance  
+Object-Oriented Programming, Abstract Data Types
 
 :)
